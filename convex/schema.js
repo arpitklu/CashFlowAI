@@ -9,7 +9,7 @@ export default defineSchema({
         imageUrl:v.optional(v.string()),
     })
         .index("by_token", ["tokenIdentifier"])
-        .index("by_token", ["email"])
-        .searchIndex("serach_name", { searchField: "nme" })
-        .searchIndex("serach_email", { searchField: "email" }),
+        .index("by_email", ["email"])
+        .searchIndex("search_name", { searchField: "name" })
+        .searchIndex("search_email", { searchField: "email" }),
 });
